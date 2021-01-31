@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee registration</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="index.js"></script>
+</head>  
+
+<body>
+    <div class="newEmployee"><button id= "btn" type="button" onclick="generate_form()">New Employee</button></div>    
+
+    <div class="container">
+        <form  id= "form">           
+            <span class="close" onclick="form_close()">&times;</span>
+            <div class="form_elements">
+                <label>Name</label> <input type="text" placeholder="Enter your name" id="1" value= "">
+            </div>
+
+            <div class="form_elements">
+                <label>Employee ID</label> <input type="text" placeholder="Enter your employee id" id="2" value= "">
+            </div>
+
+            <div class= "form_elements">
+                <label>Department</label>
+                <select name="dpmt" placeholder="Choose" id= "3">
+                    <option value="">--Choose department--</option>
+                    <option value="Software">SDE</option>                               <!--writing selected creates a by default selected company in the dropbox in the form-->
+                    <option value="Electrical" >Electrical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Communication">Communications</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </div>
+
+            <div class="form_elements">
+                <label>Email ID</label> <input type="email" class= "inp" placeholder="Enter your email" id= "4" value= "">
+            </div>
+
+            <div class="form_elements">
+                <label>Date of Joining</label> <input type="date" id="5" value= "">
+            </div>
+
+            <div id="buttons">
+                <div id="left"><button class= "hello" type="button" id= "myButton" onclick= "show_table()">Submit</button></div>
+                <div id="right"><button class= "hello" type="button" onclick= "clear_form()">Clear</button></div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class= "data" id= "unique">
+        <!-- <h1>Employee Record</h1> -->
+        <span id= "header">Employee Record</span>
+
+        <div class="tablebody">
+            <table>
+                <thead>
+                    <tr class= "head_row">
+                        <th><div class= "usual">Clear</div></th>
+                        <th><div class= "usual">Name</div></th>
+                        <th><div class= "usual">Employee ID</div></th>
+                        <th><div class= "usual">Department</div></th>
+                        <th><div class= "usual">Email ID</div></th>
+                        <th><div class= "usual">Joining Date</div></th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
